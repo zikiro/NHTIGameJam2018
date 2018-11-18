@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class SpeedyShip : MonoBehaviour {
 
-    private GameObject cannonball;
+    public GameObject cannonball;
+    public GameObject miniCannonball;
     //ShipCannons
-    private GameObject cannonFrontMiddle;
-    private GameObject cannonFrontLeft;
-    private GameObject cannonFrontRight;
-    private GameObject cannonBackLeft;
-    private GameObject cannonBackRight;
+    public GameObject cannonFront;
+    public GameObject cannonLeft;
+    public GameObject cannonRight;
     // Use this for initialization
     void Start () {
 		
@@ -20,23 +19,21 @@ public class SpeedyShip : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(cannonball);
+            GameObject clone;
+            clone = Instantiate(cannonball, new Vector3(cannonLeft.transform.position.x, cannonLeft.transform.position.y, cannonLeft.transform.position.z), transform.rotation);
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * 10);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-
+            GameObject clone;
+            clone = Instantiate(cannonball, new Vector3(cannonRight.transform.position.x, cannonRight.transform.position.y, cannonRight.transform.position.z), transform.rotation);
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * 10);
         }
         if(Input.GetKeyDown(KeyCode.Space))
         {
-
+            GameObject clone;
+            clone = Instantiate(miniCannonball, new Vector3(cannonFront.transform.position.x, cannonFront.transform.position.y, cannonFront.transform.position.z), transform.rotation);
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * 10);
         }
     }
 }
