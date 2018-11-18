@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23323241420242774}
   - component: {fileID: 65087464753445204}
   - component: {fileID: 114116131980194298}
+  - component: {fileID: 114999178381836626}
   m_Layer: 0
   m_Name: Ship
   m_TagString: AIShip
@@ -106,5 +107,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 568cc0a0dac598342b87761d90b4ba46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114999178381836626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025566784990948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9e25831bab39e4c811c7751da1f044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

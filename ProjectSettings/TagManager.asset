@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - AIShip
+  - MiniCannonball
+  - Cannonball
   layers:
   - Default
   - TransparentFX
