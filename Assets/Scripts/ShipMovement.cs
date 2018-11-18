@@ -16,7 +16,12 @@ public class ShipMovement : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
+        if (other.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            gameManager.GetComponent<GameStats>().p2ShipLives--;
+        }
 
         if (other.tag == "Dock")
         {
@@ -24,6 +29,7 @@ public class ShipMovement : MonoBehaviour {
             Destroy(this.gameObject);
             gameManager.GetComponent<GameStats>().p2DockHealth -= 20;
         }
+
     }
 
 }
