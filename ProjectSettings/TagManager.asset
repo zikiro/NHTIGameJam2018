@@ -8,6 +8,9 @@ TagManager:
   - MiniCannonball
   - Cannonball
   - Dock
+  - AIShip2
+  - Dock2
+  - Player2
   layers:
   - Default
   - TransparentFX
